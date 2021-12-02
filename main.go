@@ -51,10 +51,56 @@ func main() {
 	// } else {
 	// 	fmt.Println(num, "is odd")
 	// }
-	num := 10
-	if num%2 == 0 {
-		fmt.Println("The number is even")
-	} else {
-		fmt.Println("The number is odd")
+	// num := 10
+	// if num%2 == 0 {
+	// 	fmt.Println("The number is even")
+	// } else {
+	// 	fmt.Println("The number is odd")
+	// }
+
+	// loops
+	// exlude do while and while
+	// for i := 1; i <= 10; i++ {
+	// if i > 5 {
+	// 	break
+	// }
+	// if i%2 == 0 {
+	// 	continue
+	// }
+	// fmt.Printf(" %d", i)
+	// }
+
+	// fmt.Printf("\nline after for loop")
+	// n := 5
+	// for i := 0; i < n; i++ {
+	// 	for j := 0; j <= i; j++ {
+	// 		fmt.Print("*")
+	// 	}
+	// 	fmt.Println()
+	// }
+	// outer:
+	// 	for i := 0; i < 3; i++ {
+	// 		for j := 1; j < 4; j++ {
+	// 			fmt.Printf("i = %d, j = %d\n", i, j)
+	// 			if i == j {
+	// 				// break
+	// 				break outer
+	// 			}
+	// 		}
+	// 	}
+
+	// i := 0
+
+	// for i <= 10 {
+	// 	fmt.Printf("%d ", i)
+	// 	i += 2
+	// }
+
+	// for no, i := 10, 1; i <= 10 && no <= 19; i, no = i+1, no+1 {
+	// 	fmt.Printf("%d * %d = %d\n", no, i, no*i)
+	// }
+
+	for {
+		fmt.Println("Hello World")
 	}
 }
