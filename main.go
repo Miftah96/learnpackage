@@ -1,8 +1,6 @@
 package main
 
-import (
-	"fmt"
-)
+import "fmt"
 
 // "learnpackage/simpleinterest"
 
@@ -26,25 +24,73 @@ import (
 // 	return num
 // }
 
-func changeLocal(num [5]int) {
-	num[0] = 55
-	fmt.Println("inside funtion", num)
-}
+// func changeLocal(num [5]int) {
+// 	num[0] = 55
+// 	fmt.Println("inside funtion", num)
+// }
 
-func printarray(a [3][2]string) {
-	for _, v1 := range a {
-		for _, v2 := range v1 {
-			fmt.Printf("%s ", v2)
-		}
-		fmt.Printf("\n")
+// func printarray(a [3][2]string) {
+// 	for _, v1 := range a {
+// 		for _, v2 := range v1 {
+// 			fmt.Printf("%s ", v2)
+// 		}
+// 		fmt.Printf("\n")
+// 	}
+// }
+
+func subtactOne(numbers []int) {
+	for i := range numbers {
+		numbers[i] -= 2
 	}
 }
 
+func countries() []string {
+	countries := []string{"USA", "Singapore", "Germany", "India", "Australia"}
+	neededCountries := countries[:len(countries)-2]
+	countriesCpy := make([]string, len(neededCountries))
+	copy(countriesCpy, neededCountries)
+	return countriesCpy
+}
 func main() {
-	cars := []string{"Ferrari", "Honda", "Ford"}
-	fmt.Println("cars:", cars, "has old length", len(cars), "and capacity", cap(cars))
-	cars = append(cars, "Toyota")
-	fmt.Println("cars:", cars, "has new length", len(cars), "and capacity", cap(cars))
+	countriesNeeded := countries()
+	fmt.Println(countriesNeeded)
+	// nos := []int{8, 7, 6}
+	// fmt.Println("slice before function call", nos)
+	// subtactOne(nos)
+	// fmt.Println("slice after function call", nos)
+
+	// pls := [][]string{
+	// 	{"C#", "c++"},
+	// 	{"Javascript"},
+	// 	{"Go", "Rust"},
+	// }
+
+	// for _, v1 := range pls {
+	// 	for _, v2 := range v1 {
+	// 		fmt.Printf("%s ", v2)
+	// 	}
+	// 	fmt.Printf("\n")
+	// }
+
+	// veggies := []string{"Potatoes", "Tomatoes", "Brinjai"}
+	// fruits := []string{"Orange", "Apples"}
+	// food := append(veggies, fruits...)
+	// fmt.Println("Food:", food)
+	// fmt.Println("Food:", len(food), cap(food))
+
+	// var names []string
+	// if names == nil {
+	// 	fmt.Println("slice is nil going to append")
+	// 	names = append(names, "Akhmad", "Arif", "Anggi")
+	// 	fmt.Println("name contents:", names)
+	// }
+
+	// cars := []string{"Ferrari", "Honda", "Ford"}
+	// fmt.Println("cars:", cars, "has old length", len(cars), "and capacity", cap(cars))
+	// cars = append(cars, "Toyota")
+	// cars = append(cars, "BMW")
+	// cars = append(cars, "Porsche")
+	// fmt.Println("cars:", cars, "has new length", len(cars), "and capacity", cap(cars))
 	// i := make([]int, 5, 5)
 	// fmt.Println(i)
 
