@@ -38,22 +38,50 @@ import "fmt"
 // 	}
 // }
 
-func subtactOne(numbers []int) {
-	for i := range numbers {
-		numbers[i] -= 2
+// func subtactOne(numbers []int) {
+// 	for i := range numbers {
+// 		numbers[i] -= 2
+// 	}
+// }
+
+// func countries() []string {
+// 	countries := []string{"USA", "Singapore", "Germany", "India", "Australia"}
+// 	neededCountries := countries[:len(countries)-2]
+// 	countriesCpy := make([]string, len(neededCountries))
+// 	copy(countriesCpy, neededCountries)
+// 	return countriesCpy
+// }
+
+// func hello(b ...int, a int) {
+
+// }
+
+func find(num int, nums ...int) {
+	fmt.Printf("type of nums is %T\n", nums)
+	found := false
+	for i, v := range nums {
+		if v == num {
+			fmt.Println(num, "found at index", i, "in", nums)
+			found = true
+		}
 	}
+
+	if !found {
+		fmt.Println(num, "not found in ", nums)
+	}
+	fmt.Printf("\n")
 }
 
-func countries() []string {
-	countries := []string{"USA", "Singapore", "Germany", "India", "Australia"}
-	neededCountries := countries[:len(countries)-2]
-	countriesCpy := make([]string, len(neededCountries))
-	copy(countriesCpy, neededCountries)
-	return countriesCpy
-}
 func main() {
-	countriesNeeded := countries()
-	fmt.Println(countriesNeeded)
+	find(89, 89, 90, 95)
+	find(45, 56, 67, 45, 90, 109)
+	find(78, 38, 56, 98)
+	find(87)
+
+	// r := hello(8, 1)
+
+	// countriesNeeded := countries()
+	// fmt.Println(countriesNeeded)
 	// nos := []int{8, 7, 6}
 	// fmt.Println("slice before function call", nos)
 	// subtactOne(nos)
@@ -258,6 +286,7 @@ func main() {
 	// case num >= 101:
 	// 	fmt.Printf("%d is greather than 100", num)
 	// }
+
 	// switch num := number(); {
 	// switch num := -25; {
 	// case num < 50:
