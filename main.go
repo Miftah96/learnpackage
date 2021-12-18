@@ -1,7 +1,5 @@
 package main
 
-import "fmt"
-
 // "learnpackage/simpleinterest"
 
 // var p, r, t = -5000.0, 10.0, 1.0
@@ -73,15 +71,104 @@ import "fmt"
 // 	fmt.Printf("\n")
 // }
 
-func change(s ...string) {
-	s[0] = "Go"
-	s = append(s, "playground")
-	fmt.Println(s)
-}
+// func change(s ...string) {
+// 	s[0] = "Go"
+// 	s = append(s, "playground")
+// 	fmt.Println(s)
+// }
+
+// type employee struct {
+// 	salary  int
+// 	country string
+// }
+
 func main() {
-	welcome := []string{"hello", "world"}
-	change(welcome...)
-	fmt.Println(welcome)
+	map1 := map[string]int{
+		"one": 1,
+		"two": 2,
+	}
+	map2 := map1
+	if map2 == map1 {
+	}
+
+	// emp1 := employee{
+	// 	salary:  1200,
+	// 	country: "USA",
+	// }
+
+	// emp2 := employee{
+	// 	salary:  1400,
+	// 	country: "Canada",
+	// }
+
+	// emp3 := employee{
+	// 	salary:  1300,
+	// 	country: "India",
+	// }
+
+	// employeeInfo := map[string]employee{
+	// 	"Steve": emp1,
+	// 	"Mike":  emp2,
+	// 	"Joe":   emp3,
+	// }
+	// for name, info := range employeeInfo {
+	// 	fmt.Printf("Employee: %s Salary:$%d Country: %s\n", name, info.salary, info.country)
+	// }
+
+	// fmt.Println("length is", len(employeeInfo))
+
+	// var employeeSalary map[string]int
+	// employeeSalary["Steve"] = 1200
+	// fmt.Println(employeeSalary)
+
+	// employeeSalary := map[string]int{
+	// 	"akhmad": 5000000,
+	// 	"dika":   3500000,
+	// 	"maya":   4000,
+	// }
+
+	// fmt.Println("Original employee salary", employeeSalary)
+	// modified := employeeSalary
+	// modified["maya"] := 5000000
+	// fmt.Println("Employee salary changed", employeeSalary)
+
+	// fmt.Println("map before deletion", employeeSalary)
+	// delete(employeeSalary, "maya")
+	// fmt.Println("map after deletion", employeeSalary)
+
+	// fmt.Println("Content of the map")
+	// for key, value := range employeeSalary {
+	// 	fmt.Printf("employeeSalary[%s] = %d\n", key, value)
+	// }
+
+	// employee := "dika"
+	// salary := employeeSalary[employee]
+	// fmt.Println("Salary of", employee, "is", salary)
+
+	// employeeSalary := map[string]int{
+	// 	"Akhmad": 5000000,
+	// 	"Dika":   3500000,
+	// }
+	// fmt.Println("Salary of joe is", employeeSalary["joe"])
+	// newEmp := "Akhmad"
+	// value, ok := employeeSalary[newEmp]
+	// if ok == true {
+	// 	fmt.Println("Salary of", newEmp, "is", value)
+	// 	return
+	// }
+	// fmt.Println(newEmp, "not found ")
+
+	// Version one
+	// employeeSalary := make(map[string]int)
+	// employeeSalary["Akhmad"] = 5000000
+	// employeeSalary["Dika"] = 3500000
+	// employeeSalary["Arif"] = 4000000
+	// fmt.Println("employeeSalary map contents: ", employeeSalary)
+	// fmt.Println(employeeSalary)
+
+	// welcome := []string{"hello", "world"}
+	// change(welcome...)
+	// fmt.Println(welcome)
 
 	// nums := []int{89, 90, 95}
 	// find(89, nums...)
