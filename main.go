@@ -1,5 +1,9 @@
 package main
 
+import (
+	"fmt"
+)
+
 // "learnpackage/simpleinterest"
 
 // var p, r, t = -5000.0, 10.0, 1.0
@@ -82,14 +86,133 @@ package main
 // 	country string
 // }
 
+// by of a string
+func printBytes(s string) {
+	fmt.Printf("Bytes: ")
+	for i := 0; i < len(s); i++ {
+		fmt.Printf("%x ", s[i])
+	}
+}
+
+// Accessing individual characters of a string
+func printChars(s string) {
+	fmt.Printf("Characters: ")
+	// for i := 0; i < len(s); i++ {
+	// 	fmt.Printf("%c", s[i])
+	// }
+
+	// rune
+	runes := []rune(s)
+	for i := 0; i < len(runes); i++ {
+		fmt.Printf("%c ", runes[i])
+	}
+}
+
+// Accessing individual runes using for range loop
+func charsAndBytePosition(s string) {
+	for index, rune := range s {
+		fmt.Printf("%c starts at byte %d\n", rune, index)
+	}
+}
+
+func compareStrings(str1 string, str2 string) {
+	if str1 == str2 {
+		fmt.Printf("%s and %s are equal\n", str1, str2)
+		return
+	}
+	fmt.Printf("%s and %s are not equal\n", str1, str2)
+}
+
+// Strings are immutable
+// func mutate(s string) string {
+func mutate(s []rune) string {
+	s[0] = 'a'
+	return string(s)
+}
 func main() {
-	map1 := map[string]int{
-		"one": 1,
-		"two": 2,
-	}
-	map2 := map1
-	if map2 == map1 {
-	}
+	// what a string ?
+	// A string is a slice of bytes in Go.
+	// Strings can be created by enclosing a set of characters inside double quotes " ".
+
+	// simple program
+	// name := "Miftah"
+	// fmt.Println(name)
+
+	// byte of a string
+	// name := "Hello world"
+	// fmt.Printf("String: %s\n", name)
+	// printBytes(name)
+
+	// Accessing individual characters of a string
+	// fmt.Printf("String: %s\n", name)
+	// printChars(name)
+	// fmt.Printf("\n")
+	// printBytes(name)
+	// fmt.Printf("\n\n")
+	// name = "Señor"
+	// fmt.Printf("String: %s\n", name)
+	// printChars(name)
+	// fmt.Printf("\n")
+	// printBytes(name)
+
+	// Accessing individual runes using for range loop
+	// name := "Señor"
+	// charsAndBytePosition(name)
+
+	// Creating a string from a slice of bytes
+	// byteSlice := []byte{0x43, 0x61, 0x66, 0xC3, 0xA9}
+	// byteSlice := []byte{67, 97, 102, 195, 169}
+
+	// Creating a string from a slice of runes
+	// byteSlice := []rune{0x0053, 0x0065, 0x00f1, 0x006f, 0x0072}
+	// str := string(byteSlice)
+	// fmt.Println(str)
+
+	// String length
+	// word1 := "Señor"
+	// fmt.Printf("String: %s\n", word1)
+	// fmt.Printf("Length: %d\n", utf8.RuneCountInString(word1))
+	// fmt.Printf("Number of bytes: %d\n", len(word1))
+	// fmt.Printf("\n")
+	// word2 := "Pets"
+	// fmt.Printf("String: %s\n", word2)
+	// fmt.Printf("Length: %d\n", utf8.RuneCountInString(word2))
+	// fmt.Printf("Number of bytes: %d\n", len(word2))
+
+	// String comparison
+	// string1 := "Go"
+	// string2 := "Go"
+	// compareStrings(string1, string2)
+	// string3 := "Hello"
+	// string4 := "World"
+	// compareStrings(string3, string4)
+
+	// String concatenation
+	// String concatenation - simple
+	// string1 := "Go"
+	// string2 := "is awesome"
+	// result := string1 + " " + string2
+
+	// String concatenation - using sprinf
+	// result := fmt.Sprintf("%s %s", string1, string2)
+	// fmt.Println(result)
+
+	// Strings are immutable
+	h := "Hello"
+
+	// error
+	// fmt.Println(mutate(h))
+
+	// using rune
+	fmt.Println(mutate([]rune(h)))
+
+	// map1 := map[string]int{
+	// 	"one": 1,
+	// 	"two": 2,
+	// }
+	// map2 := map1
+	// if map2 == map1 {
+	// }
 
 	// emp1 := employee{
 	// 	salary:  1200,
